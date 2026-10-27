@@ -65,7 +65,7 @@ def graph_with_multiple_x_values(
         )
         plt.close(figure)
 
-    # Save one separate feature-vs-target graph for every feature.
+    # Save one separate feature-vs-target graph for every feature. 
     for feature_index, feature_name in enumerate(feature_names):
         figure, axis = plt.subplots(figsize=(9, 6))
         axis.scatter(

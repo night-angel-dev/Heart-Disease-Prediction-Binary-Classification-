@@ -5,12 +5,17 @@ import matplotlib.pyplot as plt
 import os
 from pathlib import Path
 from plotting import graph_with_multiple_x_values
+from preprocessing import make_binary_target
+
+
 # fetch dataset 
 heart_disease = fetch_ucirepo(id=45) 
   
 # data (as pandas dataframes) 
 X = heart_disease.data.features 
 y = heart_disease.data.targets 
+y_raw = y.copy()
+y = make_binary_target(y)
   
 # metadata 
 print(heart_disease.metadata) 
@@ -20,7 +25,8 @@ print(heart_disease.variables)
 
 
 print(f"Data or Matrix X initially:\n{X}")
-print(f"y initially:\n{y}")
+print(f"Raw y (severity):\n{y_raw}")
+print(f"Binary y (classification target):\n{y}")
 
 # Excluded num, num is the target
 feature_names = ["age", "sex", "cp", "trestbps", "chol", "fbs", "restecg", "thalach", "exang", "oldpeak", "slope", "ca", "thal"]
