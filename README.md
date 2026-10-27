@@ -16,9 +16,17 @@
 ## Evaluation 
 - For evaluation we will use accuracy, precision/recall, F1, ROC-AUC, confusion matrices, and stratified cross validation.
 
+## Project Structure
+- `run_eda.py`: Loads the dataset and runs the exploratory data analysis workflow.
+- `preprocessing.py`: Contains transformations applied before modeling.
+- `eda_plots.py`: Creates and saves exploratory data visualizations.
+- `models.py`: Reserved for model training functions.
+- `evaluation.py`: Reserved for model evaluation functions.
+- `plots/`: Stores generated EDA visualizations.
+
 ## Time Line
 - Sept 27: Proposal Submitted
 - Oct 20: Data preprocessing and Exploratory Data Analysis
-- Oct 27: Model Training & Selection + Mid-semester update
+- Oct 28: Model Training & Selection + Mid-semester update
 - Nov 15: Evaluation and tuning
 - Dec 03: Final Report and presentation 

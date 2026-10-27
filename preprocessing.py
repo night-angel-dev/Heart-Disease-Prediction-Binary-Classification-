@@ -1,3 +1,10 @@
+"""
+preprocessing.py
+Contains transformations applied before modeling.
+
+"""
+
+
 import pandas as pd
 
 
